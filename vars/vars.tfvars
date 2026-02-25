@@ -1,0 +1,12 @@
+project_id = "my-gcp-project-id"
+
+service_accounts = {
+  cicd = {
+    account_id   = "cicd-sa"
+    display_name = "CI/CD Service Account"
+  }
+  terraform = {
+    account_id   = "terraform-sa"
+    display_name = "Terraform Automation Service Account"
+  }
+}
