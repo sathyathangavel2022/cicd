@@ -1,0 +1,23 @@
+{
+    "lifecycle": {
+        "rule": [
+            {
+                "action": {
+                    "type": "Delete"
+                },
+                "condition": {
+                    "isLive": false,
+                    "numNewerVersions": 3
+                }
+            },
+            {
+                "action": {
+                    "type": "Delete"
+                },
+                "condition": {
+                    "daysSinceNoncurrentTime": 1
+                }
+            }
+        ]
+    }
+}

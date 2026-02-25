@@ -11,6 +11,11 @@ terraform {
       version = "~> 5.0"
     }
   }
+
+  backend "gcs" {
+    bucket  = "xb-ops-cbf86-terraform-state"
+    prefix  = "terraform-org"   # folder path inside bucket
+  }
 }
 
 provider "google" {
