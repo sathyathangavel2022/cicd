@@ -1,4 +1,4 @@
-project_id = "my-gcp-project-id"
+project_id = "playground-adnan"
 # region= me-central2
 
 service_accounts = {
