@@ -17,12 +17,12 @@ steps:
   # Terraform plan
   - name: "hashicorp/terraform:1.5.7"
     id: plan
-    args: ["plan", "-var-file=vars/vars.tfvars"]
+    args: ["plan", "-var-file=vars/vars.tfvars",'-out=tfplan']
 
   # Terraform apply
   - name: "hashicorp/terraform:1.5.7"
     id: apply
-    args: ["apply", "-var-file=vars/vars.tfvars"]
+    args: ['apply', '-auto-approve', 'tfplan']
 
 options:
   logging: CLOUD_LOGGING_ONLY
