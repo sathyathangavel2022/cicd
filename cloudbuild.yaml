@@ -4,10 +4,9 @@ steps:
     id: fmt
     args: ["fmt", "-check"]
 
-  # Terraform init
-  - name: "hashicorp/terraform:1.5.7"
-    id: init
-    args: ["init", "-backend-config=backend-config.tfvars"]
+- name: "hashicorp/terraform:1.5.7"
+  id: init
+  args: ["init"]
 
   # Terraform validate
   - name: "hashicorp/terraform:1.5.7"
