@@ -3,6 +3,10 @@ variable "project_id" {
   type        = string
 }
 
+variable "region" {
+  description = "The GCP region"
+  type        = string
+}
 variable "service_accounts" {
   description = "Map of service accounts to create"
   type = map(object({

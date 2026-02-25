@@ -1,4 +1,5 @@
 project_id = "my-gcp-project-id"
+region= me-central2
 
 service_accounts = {
   cicd = {
