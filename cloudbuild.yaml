@@ -22,7 +22,7 @@ steps:
   # Terraform apply
   - name: "hashicorp/terraform:1.5.7"
     id: apply
-    args: ["apply", "-var-file=vars/vars.tfvars", "-auto-approve"]
+    args: ["apply", "-var-file=vars/vars.tfvars"]
 
 options:
   logging: CLOUD_LOGGING_ONLY
