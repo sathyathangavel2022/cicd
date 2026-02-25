@@ -17,7 +17,7 @@ steps:
   # Terraform plan
   - name: "hashicorp/terraform:1.5.7"
     id: plan
-    args: ["plan", "-var-file=vars/terraform.tfvars"]
+    args: ["plan", "-var-file=vars/vars.tfvars"]
 
 options:
   logging: CLOUD_LOGGING_ONLY
