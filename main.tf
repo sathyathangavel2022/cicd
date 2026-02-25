@@ -13,8 +13,8 @@ terraform {
   }
 
   backend "gcs" {
-    bucket  = "xb-ops-cbf86-terraform-state"
-    prefix  = "terraform-org"   # folder path inside bucket
+    bucket = "xb-ops-cbf86-terraform-state"
+    prefix = "terraform-org" # folder path inside bucket
   }
 }
 
