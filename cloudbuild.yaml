@@ -4,9 +4,10 @@ steps:
     id: fmt
     args: ["fmt", "-check"]
 
-- name: "hashicorp/terraform:1.5.7"
-  id: init
-  args: ["init"]
+  # Terraform init
+  - name: "hashicorp/terraform:1.5.7"
+    id: init
+    args: ["init"]
 
   # Terraform validate
   - name: "hashicorp/terraform:1.5.7"
@@ -22,4 +23,4 @@ options:
   logging: CLOUD_LOGGING_ONLY
 
 # Optional: run under a custom service account
-serviceAccount: "projects/playground-adnan/serviceAccounts/custom-cloudbuild-sa@playground-adnan.iam.gserviceaccount.com"
+#serviceAccount: "projects/playground-adnan/serviceAccounts/custom-cloudbuild-sa@playground-adnan.iam.gserviceaccount.com"
