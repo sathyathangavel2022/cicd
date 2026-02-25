@@ -1,0 +1,26 @@
+steps:
+  # Terraform fmt
+  - name: "hashicorp/terraform:1.5.7"
+    id: fmt
+    args: ["fmt", "-check"]
+
+  # Terraform init
+  - name: "hashicorp/terraform:1.5.7"
+    id: init
+    args: ["init", "-backend-config=backend-config.tfvars"]
+
+  # Terraform validate
+  - name: "hashicorp/terraform:1.5.7"
+    id: validate
+    args: ["validate"]
+
+  # Terraform plan
+  - name: "hashicorp/terraform:1.5.7"
+    id: plan
+    args: ["plan", "-var-file=vars/prod.tfvars"]
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+# Optional: run under a custom service account
+serviceAccount: "projects/playground-adnan/serviceAccounts/custom-cloudbuild-sa@playground-adnan.iam.gserviceaccount.com"
