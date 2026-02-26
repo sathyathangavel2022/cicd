@@ -27,5 +27,4 @@ steps:
 options:
   logging: CLOUD_LOGGING_ONLY
 
-# Optional: run under a custom service account
-#serviceAccount: "projects/playground-adnan/serviceAccounts/custom-cloudbuild-sa@playground-adnan.iam.gserviceaccount.com"
+serviceAccount: "projects/playground-adnan/serviceAccounts/custom-cloudbuild-sa@playground-adnan.iam.gserviceaccount.com"
